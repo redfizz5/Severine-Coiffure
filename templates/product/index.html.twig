@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Severine Coiffure{% endblock %}
+
+{% block body %}
+    
+    <h1 class="text-center p-4">Nos Services en Salon</h1>
+
+    {% for product in products %}
+
+<div class="row flex-row">
+  <div class="mb-5">
+    <div class="card" style="width: 25rem;">
+      <div class="card-body">
+      <h5 class="card-title text-center">{{ product.title }}</h5>
+      <p class="card-text">{{ product.content }}</p>
+      <a href="#" class="btn btn-primary">{{ product.price }}€</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    {% endfor %}
+
+
+
+{% endblock %}
